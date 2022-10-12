@@ -2,6 +2,7 @@
 
 import random
 
+# user guess the number the computer has in RAM
 def userGuess():
     numberRange = int(input("\nLet me choose a secret number between 1 to "))
     secretNumber = random.randint(1, numberRange)
@@ -17,7 +18,7 @@ def userGuess():
         numberOfSteps += 1
     print(f"\nCongrats you guessed the secret number {secretNumber} in {numberOfSteps} steps!!")
 
-
+#the computer guess the number the user has in mind
 def computerGuess():
     low = int(input("Tell me the lower limit of your secret number : "))
     high = int(input("Tell me the upper limit of your secret number : "))
