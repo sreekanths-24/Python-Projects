@@ -21,6 +21,7 @@ def userGuess():
 def computerGuess():
     low = int(input("Tell me the lower limit of your secret number : "))
     high = int(input("Tell me the upper limit of your secret number : "))
+    high += 1
     result = 0
     numOfSteps = 0
     
@@ -31,7 +32,6 @@ def computerGuess():
         while result != "c":
             guess = random.randrange(low, high)
             
-
             result = str(input(f"\nIs the number in your mind {guess} ? too high =\"h\", too low =\"l\", correct guess =\"c\": "))
 
             if result == "h":
