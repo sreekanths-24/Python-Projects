@@ -36,15 +36,17 @@ def computerGuess():
             result = str(input(f"\nIs the number in your mind {guess} ? too high =\"h\", too low =\"l\", correct guess =\"c\": "))
 
             if result == "h":
-                high = guess
+                high = guess-1
             elif result == "l":
-                low = guess
+                low = guess+1
 
             if low == high:
                 guess = low
-            
+
+            if low == high:
+                guess = low
+
             numOfSteps += 1
     print(f"The computer guessed your secret number is {guess} in {numOfSteps} steps!!")
-
-#computerGuess()
+computerGuess()
 #userGuess()
