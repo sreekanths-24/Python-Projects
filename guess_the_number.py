@@ -48,5 +48,5 @@ def computerGuess():
 
             numOfSteps += 1
     print(f"The computer guessed your secret number is {guess} in {numOfSteps} steps!!")
-computerGuess()
+#computerGuess()
 #userGuess()

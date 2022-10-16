@@ -1,10 +1,10 @@
 import random
-from words_for_hangman import words
+from not_working_yet.words_for_hangman import words
 
 def selectRandomWord(words):
     randomWord = random.choice(words)
-    while '-' or ' ' in randomWord:
-        randomWord = random.choice(words)
+    #while '-' or ' ' in randomWord:
+    #    randomWord = random.choice(words)
     return randomWord
 
 def printRules():
@@ -27,22 +27,21 @@ bodyParts = ["head","body", "arms", "legs"]
 gallows = []
 
 
-print("\nLets start the game\n")
 theRandomWord = selectRandomWord(words)
 wordLength = len(theRandomWord)
 
 dashedLines = wordLength * "_"
+dashedLines = str(dashedLines)
 userGuesses = {}
-i =0
-while i == 0:
-    
+print("\nLets start the game!!\n")
+
+while ("_" not in dashedLines) and (len(gallows) !=4):
     print(theRandomWord)
     print(f"\nWord : {dashedLines}")
     print(f"\nGallows : {gallows}")
     print(f"\nPrevious Guesses : {userGuesses}")
     userGuess = str(input("\nGuess : "))
 
-    
     if userGuess not in theRandomWord:
         print(f"\nSorry the letter {userGuess} is not in the word. Try again.")
         gallows.append(bodyParts[0])
@@ -52,3 +51,14 @@ while i == 0:
     else:
         print("Yes, the letter you gussed is in the word.")
         userGuesses.add(userGuess)
+
+
+
+
+
+
+#while i != 0:
+    
+    
+    
+    
